@@ -118,3 +118,115 @@ int c = a++; // c = 6, a = 7
 ```
 
 ---
+
+## ✍️ String é uma classe!
+
+ - Em Java, String não é um tipo primitivo, mas sim uma classe da biblioteca padrão (java.lang.String).
+ - Apesar disso, ela pode ser usada como se fosse um tipo básico, pois a linguagem trata String de forma especial (por exemplo, com o uso direto de aspas duplas).
+
+📌 Exemplo:
+
+```java
+String nome = "Guilherme";
+System.out.println(nome.toUpperCase()); // Exibe: GUILHERME
+```
+
+🔍 Características:
+
+  - Strings são imutáveis: uma vez criada, não pode ser modificada (qualquer operação cria uma nova String).
+
+  - Possui vários métodos úteis, como: <b>length(), toUpperCase(), toLowerCase(), contains(), substring(), etc. </b>
+
+É possível criar uma String com:
+
+```java
+String texto = new String("Olá");
+```
+- Internamente, String é tratada como uma sequência de caracteres (char[]).
+
+
+## 🔍 Comparação de Strings em Java
+
+- O operador == não compara o conteúdo das strings, apenas verifica se as duas variáveis apontam para o mesmo objeto na memória.
+- Para comparar o conteúdo textual de duas strings, use o método .equals().
+
+Exemplo:
+
+````java
+String s1 = "Java";
+String s2 = "Java";
+String s3 = new String("Java");
+
+System.out.println(s1 == s2);       // true (mesmo objeto por causa do pool de strings)
+System.out.println(s1 == s3);       // false (objetos diferentes)
+System.out.println(s1.equals(s3));  // true (conteúdo igual)
+````
+
+
+## 📝 Text Block em Java (Introduzido no Java 15)
+
+- Text Block é uma forma simplificada de criar Strings multilinha.
+- Facilita a escrita de textos longos, com quebras de linha e formatação preservadas, sem precisar usar concatenações ou caracteres especiais.
+- Utiliza três aspas duplas (""") para delimitar o texto.
+
+Exemplo:
+````java
+String json = """
+{
+"nome": "Guilherme",
+"idade": 33,
+"profissao": "Desenvolvedor"
+}
+""";
+System.out.println(json);
+````
+
+## 🖋️ Formatação de Textos em Java com String.format()
+
+- O método format() da classe String permite criar textos formatados utilizando placeholders.
+- Placeholders são representados por % seguido de uma letra que indica o tipo de dado.
+
+- Placeholders comuns:
+  - <b>%s</b> — String
+  - <b>%d</b> — Inteiro decimal
+  - <b>%f</b> — Número de ponto flutuante
+
+```java
+String nome = "Guilherme";
+int idade = 33;
+double salario = 2500.75;
+
+String textoFormatado = String.format("Nome: %s, Idade: %d, Salário: %.2f", nome, idade, salario);
+System.out.println(textoFormatado);
+```
+Saída:
+
+````java
+Nome: Guilherme, Idade: 33, Salário: 2500.75
+````
+
+## 🖋️ Formatação com Text Blocks usando formatted()
+
+- Além do String.format(), a partir do Java 15 é possível usar o método formatted() diretamente em Text Blocks e Strings.
+- O método formatted() recebe os valores que substituirão os placeholders (%s, %d, etc.) no texto.
+
+Exemplo com Text Block:
+
+```java
+String texto = """
+Nome: %s
+Idade: %d
+Salário: %.2f
+""".formatted("Guilherme", 33, 2500.75);
+
+System.out.println(texto);
+```
+Saída:
+
+```java
+Nome: Guilherme
+Idade: 33
+Salário: 2500.75
+```
+
+---
