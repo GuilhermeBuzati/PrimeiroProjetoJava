@@ -8,5 +8,18 @@ public class Main {
         boolean incluidoNoPlano = false;
         System.out.println("Incluido no plano: " + incluidoNoPlano);
 
+        //Média calculada pelas 3 notas de avaliadores
+        double media = (9.8 + 6.3 + 8.0) / 3;
+        System.out.println("Media: " + media);
+
+        String sinopse;
+        sinopse = """
+                Filme Top Gun
+                Filme de aventura com galã dos anos 80
+                Muito bom!
+                Ano de Lançamento
+                """ + anoDeLancamento;
+        System.out.println(sinopse);
+
     }
 }

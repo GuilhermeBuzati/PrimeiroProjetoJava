@@ -1,11 +1,11 @@
 
-# 📘 Resumo das Anotações - Java com Alura  
+# 📘 Resumo das Anotações - Java com Alura
 **Curso:** Java: Criando a sua primeira aplicação
 
 ---
 
 ## ✅ 1. Instalação do JDK
-- Instalado o **JDK 21**, versão mais recente com suporte de longo prazo (LTS).  
+- Instalado o **JDK 21**, versão mais recente com suporte de longo prazo (LTS).
 - Link: [Oracle JDK 21 para Windows](https://www.oracle.com/br/java/technologies/downloads/#jdk21-windows)
 
 ---
@@ -65,3 +65,56 @@
   - Escritas em **CAIXA_ALTA** com `_` (ex: `TAXA_DE_IMPOSTO`)
 
 > 🧠 **Motivo**: Aumentar legibilidade, facilitar manutenção e manter padrão profissional.
+
+---
+
+## ➕ Operadores Aritméticos
+
+| Operador | Descrição         | Exemplo     | Resultado |
+|----------|-------------------|-------------|-----------|
+| `+`      | Adição            | `3 + 2`     | `5`       |
+| `-`      | Subtração         | `5 - 3`     | `2`       |
+| `*`      | Multiplicação     | `4 * 2`     | `8`       |
+| `/`      | Divisão           | `10 / 2`    | `5`       |
+| `%`      | Resto da divisão  | `10 % 3`    | `1`       |
+
+---
+
+## ⚖️ Operadores Relacionais
+
+| Operador | Descrição         | Exemplo     | Resultado |
+|----------|-------------------|-------------|-----------|
+| `==`     | Igual a           | `5 == 5`    | `true`    |
+| `!=`     | Diferente de      | `5 != 3`    | `true`    |
+| `>`      | Maior que         | `7 > 5`     | `true`    |
+| `>=`     | Maior ou igual a  | `5 >= 5`    | `true`    |
+| `<`      | Menor que         | `3 < 5`     | `true`    |
+| `<=`     | Menor ou igual a  | `3 <= 3`    | `true`    |
+
+---
+
+## 🔗 Operadores Lógicos
+
+| Operador | Nome  | Descrição                                      | Exemplo           | Resultado |
+|----------|-------|------------------------------------------------|-------------------|-----------|
+| `&&`     | AND   | Verdadeiro se **ambos** forem `true`          | `true && false`   | `false`   |
+| `||`     | OR    | Verdadeiro se **um ou ambos** forem `true`    | `true || false`   | `true`    |
+| `!`      | NOT   | Inverte o valor lógico                        | `!true`           | `false`   |
+
+---
+
+## 🔼 Operadores de Incremento
+
+| Tipo            | Sintaxe         | Descrição                         | Exemplo         |
+|-----------------|------------------|-------------------------------------|-----------------|
+| Pré-incremento  | `++variavel`     | Incrementa antes de usar o valor   | `int x = ++a;`  |
+| Pós-incremento  | `variavel++`     | Usa o valor e depois incrementa    | `int x = a++;`  |
+
+#### Exemplo prático:
+```java
+int a = 5;
+int b = ++a; // b = 6, a = 6
+int c = a++; // c = 6, a = 7
+```
+
+---
