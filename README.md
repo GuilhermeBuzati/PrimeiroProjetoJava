@@ -230,3 +230,31 @@ Salário: 2500.75
 ```
 
 ---
+
+## 🔄 Casting Implícito
+
+- O casting implícito acontece automaticamente pelo compilador quando o tipo de dado de origem é menor ou compatível com o tipo de destino.
+- É também chamado de conversão automática.
+
+Exemplo:
+
+```java
+int numeroInteiro = 100;
+double numeroDecimal = numeroInteiro;  // casting implícito de int para double
+System.out.println(numeroDecimal);     // Saída: 100.0
+````
+- Nesse exemplo, o valor do int é automaticamente convertido para double sem necessidade de intervenção do programador.
+
+---
+
+## 🎯 Casting Explícito em Java
+
+- O casting explícito é necessário quando o tipo de origem é maior ou incompatível com o tipo de destino.
+- O programador deve indicar manualmente a conversão usando o operador (tipo).
+
+````java
+double x = 10.5;
+int y = (int) x;  // casting explícito: converte double para int
+System.out.println(y);  // Saída: 10 (parte decimal descartada)
+````
+- Importante: no casting explícito, a parte decimal é descartada quando convertemos de double para int.
